@@ -1,0 +1,29 @@
+{% extends 'global/base_library.html' %}
+{% load static %}
+
+{% block links %}
+    {% include 'partials/layout/head_links.html' %}
+{% endblock links %}
+
+
+{% block title %}Livraria{% endblock title %}
+
+
+{% block content %}
+    
+    <!-- Navbar -->
+{% include 'partials/layout/navbar.html' %}
+
+
+<div id="templatemo_content">
+    <!-- Content-Left -->
+    {% include 'partials/content/content_left.html' %}
+    
+    <!-- Content-Right -->
+    {% include 'partials/content/content_right.html' %}
+</div>
+
+
+{% endblock content %}
+    
+    

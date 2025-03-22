@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-a5*0@6b#0=^ffx@bdne_mq5(m#e$32=9ln_y=%xokdyo_phgnm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    # My Apps
+    "library",
+    
+    # Additional Packages
+    "bootstrap4",
+    "widget_tweaks",
+    
 ]
 
 MIDDLEWARE = [
@@ -54,7 +62,7 @@ ROOT_URLCONF = "reading_corner.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / 'base_templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -103,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "pt-br"
 
 TIME_ZONE = "UTC"
 
@@ -116,6 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = "staticfiles"
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = "mediafiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
