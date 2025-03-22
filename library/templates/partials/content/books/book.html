@@ -1,43 +1,34 @@
 {% load static %}
 <div class="templatemo_product_box">
+    
+    {% for book in books %}
+    
+    <div class="cleaner_with_width">&nbsp;</div>
+    
     <h1>Photography</h1>
     <img src="{% static 'library_/images/templatemo_image_01.jpg' %}" alt="image" />
-
+    
     <div class="product_info">
-        <p>Autor: </p>
+        <p>{{ book.author }}</p>
         <p>Categoria: </p>
         <p>Lançamento: </p>
-
+        
         <div class="detail_button">
-            <a href="#">Detalhes</a>
+            <a href="#">Detalhes</a>                          
         </div>
-
+        
     </div>
-
+    
     <div class="cleaner">&nbsp;</div>
 </div>
 
-
-<div class="cleaner_with_width">&nbsp;</div>
-
-
-<div class="templatemo_product_box">
-    <h1>Cooking</h1>
-   <img src="{% static 'library_/images/templatemo_image_02.jpg' %}" alt="image" />
-    <div class="product_info">
-        <p>Autor: </p>
-        <p>Categoria: </p>
-        <p>Lançamento: </p>
-
-        <div class="detail_button">
-            <a href="#">Detalhes</a>
-        </div>
-
-    </div>
-    <div class="cleaner">&nbsp;</div>
-</div>
 
 <div class="cleaner_with_height">&nbsp;</div>
+
+{% endfor %}
+
+
+
 
 
 
