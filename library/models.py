@@ -23,6 +23,8 @@ class BookModel(models.Model):
     pages = models.IntegerField(("Paginas"))
     image = models.ImageField(("Imagem"), upload_to='library/books/%y/%m/%d',)
     is_published = models.BooleanField(("Publicado"), default=False)
+    bestseller = models.BooleanField(("BestSeller"), null=True, default=False)
+    purchase_link = models.URLField(("Link de Compra"), max_length=200, null=True)
     
     def __str__(self):
         return self.title

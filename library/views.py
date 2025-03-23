@@ -15,9 +15,11 @@ class HomeView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         category = Category.objects.all()
+        best = BookModel.objects.filter(bestseller=True, is_published=True)
         
         context.update({
             'categories': category,
+            'bestsellers': best
         })
         
         return context
@@ -35,11 +37,14 @@ class DetailBook(DetailView):
     
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
+        best = BookModel.objects.filter(bestseller=True, is_published=True)
         
         context.update({
-            'categories': Category.objects.all()
+            'categories': Category.objects.all(),
+            'bestsellers': best
         })
         return context
+
     
 
 class CategoryBook(HomeView):
@@ -60,9 +65,12 @@ class CategoryBook(HomeView):
     
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
+        best = BookModel.objects.filter(bestseller=True, is_published=True)
+        
         
         context.update({
-            'categories': Category.objects.all()
+            'categories': Category.objects.all(),
+            'bestsellers': best
         })
         return context
     

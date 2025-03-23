@@ -15,7 +15,7 @@
     
     <div ontouchstart="">
         <div class="button">
-          <a href="#">Comprar</a>
+          <a href="{{ book.purchase_link }}" target="_blank">Comprar</a>
         </div>
       </div>
     
@@ -23,3 +23,5 @@
 
 <div class="cleaner_with_height">&nbsp;</div>
 </div>
+
+{% include 'partials/layout/footer.html' %}
