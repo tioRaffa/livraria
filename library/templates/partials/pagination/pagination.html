@@ -1,5 +1,7 @@
-<div class="clearfix">
-    <ul class="pagination">
+{% load static %}
+<div class="" style="position: relative; left: 250px;">
+
+    <ul class="pagination" >
         {% if page_obj.has_previous %}
             <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">Anterior</a></li>
         {% else %}

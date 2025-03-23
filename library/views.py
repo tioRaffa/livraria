@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 class HomeView(ListView):
     model = BookModel
-    queryset = BookModel.objects.filter(is_published=True).order_by('-id')
+    queryset = BookModel.objects.filter(is_published=True).order_by('?')
     template_name = 'pages/home.html'
     context_object_name = 'books'
     
@@ -59,7 +59,7 @@ class CategoryBook(HomeView):
         queryset = queryset.filter(
             category__id=self.kwargs.get('id'),
             is_published=True
-        ).order_by('-id')
+        ).order_by('?')
         
         return queryset
     

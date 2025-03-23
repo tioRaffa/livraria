@@ -15,12 +15,17 @@
 {% include 'partials/layout/navbar.html' %}
 
 
-<div id="templatemo_content">
+<div id="templatemo_content" style="margin-bottom: 500px;">
     <!-- Content-Left -->
     {% include 'partials/content/content_left/content.html' %}
     
     <!-- Content-Right -->
     {% include 'partials/content/content_right/content.html' %}
+</div>
+
+<div>
+    {% include 'partials/pagination/pagination.html' %}
+
 </div>
 
 {% include 'partials/layout/footer.html' %}
