@@ -1,0 +1,19 @@
+<div id="templatemo_content_right">
+  <div class="books-container">
+      {% for book in books %}
+      <div class="templatemo_product_box" style="margin: 3px;">
+          <h1 class="title">{{ book.title }}</h1>
+          
+          <img src="{{ book.image.url }}" alt="image" style="height: 150px; width: 100px; object-fit: cover;"/>
+
+          <div class="product_info">
+              <p>Autor: {{ book.author }}</p>
+              <p>Categoria: {{ book.category }}</p>
+              <p>Lancamento: {{ book.release_date|date:"d/m/Y" }}</p>
+              <div class="detail_button"><a href="{% url 'library:detail_book' book.id %}">Detalhes</a></div>
+          </div>
+
+      </div>
+      {% endfor %}
+  </div>
+</div>
