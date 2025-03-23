@@ -8,4 +8,4 @@ class HomeView(ListView):
     template_name = 'pages/home.html'
     context_object_name = 'books'
     
-    paginate_by = 5
+    paginate_by = 4
