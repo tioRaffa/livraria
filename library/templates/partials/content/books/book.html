@@ -11,7 +11,7 @@
                 <p>Autor: {{ book.author }}</p>
                 <p>Categoria: {{ book.category }}</p>
                 <p>Lancamento: {{ book.release_date|date:"d/m/Y" }}</p>
-                <div class="detail_button"><a href="#">Detail</a></div>
+                <div class="detail_button"><a href="{% url 'library:detail_book' book.id %}">Detalhes</a></div>
             </div>
 
         </div>
