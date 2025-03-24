@@ -1,5 +1,5 @@
 from .home import HomeView
-from .models import BookModel, Category
+from library.models import BookModel, Category
 
 
 class CategoryBook(HomeView):

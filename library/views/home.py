@@ -1,5 +1,5 @@
 from django.views.generic import ListView
-from .models import BookModel, Category
+from library.models import BookModel, Category
 
 
 class HomeView(ListView):

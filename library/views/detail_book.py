@@ -1,5 +1,5 @@
 from django.views.generic import DetailView
-from .models import BookModel, Category
+from library.models import BookModel, Category
 from django.shortcuts import get_object_or_404
 
 
